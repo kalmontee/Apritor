@@ -8,15 +8,20 @@ const ArticleSchema = new Schema({
         required: true
     },
 
-    summary: {
-        type: Schema.Types.ObjectId,
-        ref: "Note"
-    },
+    // summary: {
+    //     type: String,
+    //     required: true
+    // },
 
-    link: {
+    url: {
         type: String,
         required: true
     },
+
+    note: {
+        type: Schema.Types.ObjectId,
+        ref: "Note"
+    }
 });
 
 // This creates our model from the above schema, using mongoose's model method
