@@ -5,19 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Everything That Fits Into Scrape</title>
 </head>
 
 <body>
-    <section id="wrapper">
-        <h1 id="page-title">Note Scraper</h1>
 
-        <article id="articles"></article>
-        <div id="notes"></div>
+    <section id="wrapper">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 id="page-title">News Scraper from <span class="tech-crunch">Tech Crunch Europe</span></h1>
+
+                <button type="button" id="scrape-btn" class="btn btn-success">Scrape Articles</button>
+                <button type="button" id="edit-btn" class="btn btn-danger">Post a Comment</button>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <div id="articles"></div>
+                </div>
+                <div id="note-div" class="col-lg">
+                    <div id="notes"></div>
+                </div>
+            </div>
+        </div>
+
     </section>
+
+    <footer class="footer">
+        <p>&copy Kelvin Almonte, 2020</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
