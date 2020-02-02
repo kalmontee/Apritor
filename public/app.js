@@ -15,6 +15,13 @@ $("#scrape-btn").on("click", function(event) {
     });
 });
 
+$("#hide-btn").on("click", function(event) {
+    event.preventDefault();
+
+    $("#articles").empty();
+    $("#notes").empty();
+})
+
 $(document).on("click", ".title", function(event) {
     event.preventDefault();
     $("#notes").empty();
@@ -31,11 +38,11 @@ $(document).on("click", ".title", function(event) {
         // The title of the article
         $("#notes").append("<h4 class='notes-title'>" + data.headline + "</h4>");
 
-        // $("#notes").append("<input id='titleInput' name='headline' placeholder='Name of Title'>");
+        $("#notes").append("<input id='titleInput' name='headline' placeholder='Name of Title'>");
 
         $("#notes").append("<textarea id='bodyInput' name='body' placeholder='Insert your comment here...'></textarea>");
 
-        $("#notes").append("<button id='addComment' data-id='" + data._id + "'>Add Comment</button>");
+        $("#notes").append("<button class='btn btn-primary' id='addComment' data-id='" + data._id + "'>Add Comment</button>");
 
         // If there's a note in the article
         if (data.note) {
@@ -59,7 +66,7 @@ $(document).on("click", "#addComment", function(event) {
         method: "POST",
         url: "/articles/" + thisId,
         data: {
-            title: $("#titleInput").val(), // Value taken from title input
+            headline: $("#titleInput").val(), // Value taken from title input
             body: $("#bodyInput").val() // Value taken from note textarea
         }
 
@@ -75,8 +82,3 @@ $(document).on("click", "#addComment", function(event) {
     $("#titleInput").val("");
     $("#bodyInput").val("");
 });
-
-
-// 1. Path to URL in the server is not working
-// 2. titleInput not working
-// 3. How can I

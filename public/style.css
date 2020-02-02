@@ -84,7 +84,10 @@
 }
 
 #addComment {
-    margin: 10px 260px;
+    width: 20%;
+    margin: 15px 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 400;
 }
 
 .articles-info {
