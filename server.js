@@ -15,10 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public")); // Make public a static folder
 
-// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
 // Connect to mongoDB
-mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(MONGODB_URI);
+
+// mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
 
 app.get("/scrape", (req, res) => {
     // Here I will grab every information I need from whichever website I decide to scrape data from.
