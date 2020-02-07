@@ -1,6 +1,6 @@
 # All-the-News-That-Fit-to-Scrape
 
-is an application that lets users scrape news articles from http://techcrunch.com/europe(Europe latest tech news). Users can then view and leave comments on any articles. The app uses Cheerio to scrape news from Tech Crunch and stores them in MongoDB using Mongoose.
+Is an application that lets users scrape news articles from http://techcrunch.com/europe(Europe latest tech news). Users can then view and leave comments on any articles. The app uses Cheerio to scrape news from Tech Crunch and stores them in MongoDB using Mongoose.
 
 ## Demo
 
